@@ -13,7 +13,9 @@ agent.get(url)
             aList = $("ol li a"),info_list = [];
 
         aList.each(function(index,data){
-            var $a = $(data);
-            console.log($a.attr('href'));
+            var href = $(data).attr('href');
+            if(href.indexOf('ed2k') > -1){
+                console.log(href);
+            }
         });
     });
